@@ -7,37 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
     <style>
-        body{
-            height: 90vh;
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-image: url("{% static 'img/login.jpg' %}");
-        }
-        form{
-            margin: 0px 150px 0px 0px ;
-            float: right;
-            font-size:large ;
-            color:aqua;
-        }
-        input,button{
-            width: 100%;
-            font-size:large ;
-            color:aqua;
-            background-color: black;
-        }
-        .but{
-            background-color: red;
-            color: white;
-            border-radius: 5px;
-            border: 1px solid greenyellow;
-        }
-        #bg{
-            background-size: 1800px 900px;
-            background-repeat: no-repeat;
-            background-position: top;
-            background-attachment: fixed;
-        }
+      
     </style>
 </head>
 <body  id="bg"  >
@@ -59,7 +33,7 @@
         <span>Password</span>
         <input type="password" placeholder="Password" name="pass1" ><br><br>
         <button type="submit" class="but" >Login</button><br><br>
-        <label for="">New User?</label>
+        <label  for="">New User?</label>
         <a href="/signup">Sign Up</a>
     </form>
 

@@ -1,3 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}☕Products☕{% endblock title %}
-{% block body %}Welcome To ☕Products Page☕{% endblock body %}
+{% block head %} 
+<link rel="stylesheet" href="{% static 'css/' %}">
+
+{% endblock head %}
+
+{% block body %}
+Welcome To ☕Products Page☕
+<!-- Write your Code here -->
+{% endblock body %}
