@@ -12,6 +12,9 @@ def index(request):
 def about(request):
     return render(request,'about.html')
 
+def about2(request):
+    return render(request,'about2.html')
+
 def menu(request):
     return render(request,'menu.html')
 
