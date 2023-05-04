@@ -2,7 +2,8 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login,logout
-# from .models import Contact
+from .models import Contact
+from .models import Review
 
 # Create your views here.
 
@@ -22,11 +23,33 @@ def products(request):
     return render(request,'products.html')
 
 def review(request):
+    if request.method=="POST":
+        uname=request.POST.get('name')
+        desc=request.POST.get('msg')
+        review=Review.objects.create(name=uname,desc=desc)
+        review.save()
+        
+      
     return render(request,'review.html')
-
+def review(request):
+    data=Review.objects.all()
+    context={"data":data}    
+    return render(request,'review.html',context)
+    
 
 def contact(request):
+    if request.method=="POST":
+        uname=request.POST.get('name')
+        email=request.POST.get('email')
+        phone=request.POST.get('phone')
+        desc=request.POST.get('msg')
+        contact= Contact.objects.create(name=uname, email=email, phone=phone,desc=desc)
+        contact.save()
+             
     return render(request,'contact.html')
+
+def payment(request):
+    return render(request,'payment.html')
 
 def blog(request):
     return render(request,'blog.html')

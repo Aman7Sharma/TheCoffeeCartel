@@ -20,6 +20,16 @@ body{
     margin: 2% 4%;
     float: left;
 }
+.review1{
+    min-width: 250px;
+    background-color:#000000b0;
+    color: white;
+    border: 2px solid darkcyan;
+    width: 25%;
+    padding: 1%;
+    margin: 2% 4%;
+    float: left;
+}
 .review:hover{
     border: 2px solid cyan;
     background-color:rgba(0, 0, 0, 0.249);
@@ -32,5 +42,4 @@ body{
 }
 .user:hover{
     border: 2px solid cyan;
-
 }

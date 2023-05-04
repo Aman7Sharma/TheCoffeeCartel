@@ -10,28 +10,7 @@ body {
     color: crimson;
 }
 
-navbar {
+.navbar {
     position: fixed;
     background-color: transparent;
-}
-
-
-.slogan-container {
-    text-align: center;
-    color: #fff;
-}
-
-.slogan-container h1 {
-    font-size: 48px;
-    margin: 0;
-    padding: 0;
-}
-
-.slogan-container p {
-    font-size: 24px;
-    margin: 10px 0;
-    padding: 0;
-}
-.tb:hover{
-    color: red;
 }
