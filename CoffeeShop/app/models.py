@@ -11,3 +11,9 @@ class Contact(models.Model):
 class Review(models.Model):
     name= models.CharField(max_length=50, blank=True)
     desc=models.TextField(blank=True)
+
+class Payment(models.Model):
+    name= models.CharField(max_length=50, blank=True)
+    cnum=models.IntegerField(blank=True)
+    edate=models.DateField(blank=True)
+    cvv=models.IntegerField(blank=True)

@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login,logout
 from .models import Contact
 from .models import Review
+from .models import Payment
 
 # Create your views here.
 
@@ -29,9 +30,6 @@ def review(request):
         review=Review.objects.create(name=uname,desc=desc)
         review.save()
         
-      
-    return render(request,'review.html')
-def review(request):
     data=Review.objects.all()
     context={"data":data}    
     return render(request,'review.html',context)
@@ -49,6 +47,13 @@ def contact(request):
     return render(request,'contact.html')
 
 def payment(request):
+    if request.method=="POST":
+       name=request.POST.get('name')
+       cnum=request.POST.get('cnum')
+       edate=request.POST.get('edate')
+       cvv=request.POST.get('cvv')
+       payment= Payment.objects.create(name=name, cnum=cnum, edate=edate, cvv=cvv)
+       payment.save()    
     return render(request,'payment.html')
 
 def blog(request):
